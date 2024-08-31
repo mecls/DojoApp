@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
     marginBottom: 10,
     marginRight:30,
+    marginTop:10,
 },
   compBox: {
     backgroundColor: '#1E3A8A', // Dark blue background
