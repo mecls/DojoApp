@@ -30,10 +30,10 @@ const TodaySchedule = () => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 10,
+    padding: 0,
     alignContent:'center',
-    flex:1,
-    margin:95
+    flex:0.5,
+    margin:10
   },
   title: {
     fontSize: 20,
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   },
   scheduleText: {
     color: '#ffffff',
-    fontSize: 18,
+    fontSize: 20,
     marginBottom: 5,
   },
   scheduleTextBold:{
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: '#ffffff',
-    fontSize: 14,
+    fontSize: 20,
     fontWeight: 'bold',
   },
   largeButton: {
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
   },
   largeButtonText: {
     color: '#ffffff',
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: 'bold',
   },
 });

@@ -12,7 +12,7 @@ const HCompetitionResults = () =>{
             <Text style={styles.compText}><Text style={[styles.compText,styles.compTextBold]}>BRONZE'S:</Text>7</Text>
        
             <View style={styles.buttonContainer}>
-                <TouchableOpacity onPress={()=>{console.warn('Details');}} style={[styles.button,styles.buttonSpacing]}>
+                <TouchableOpacity onPress={()=>{console.warn('Details');}} style={styles.button}>
                     <Text style={styles.buttonText}>Details</Text>
                 </TouchableOpacity>
             </View>
@@ -24,20 +24,26 @@ const HCompetitionResults = () =>{
 
 const styles = StyleSheet.create({
   container: {
-    padding: 11,
-    alignContent:'center',
-    margin:32
+    padding: 5,
+    alignContent:'space-evenly',
+    marginTop:150,
+    flex:-0.3
   },
   title: {
     fontSize: 20,
     fontWeight: 'bold',
     fontStyle: 'italic',
     marginBottom: 10,
-  },
+    marginRight:30,
+},
   compBox: {
     backgroundColor: '#1E3A8A', // Dark blue background
     borderRadius: 15,
-    padding: 20,
+    paddingRight:80,
+    paddingBottom:20,
+    paddingTop:20,
+    marginRight:-5,
+    marginLeft:-5,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.3,
@@ -49,36 +55,35 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     position: 'absolute',
-    top: -10,
-    right: 20,
+    top: 10,
+    right: 30,
   },
   compText: {
     color: '#ffffff',
-    fontSize: 18,
+    fontSize: 20,
     marginBottom: 5,
+    marginLeft:20,
+    textAlign: 'left',    
   },
   compTextBold:{
     fontWeight:'500',
   },
   buttonContainer: {
     flexDirection: 'row',
-    justifyContent: 'flex-start',
-    marginTop: 20,
+    justifyContent: 'flex-end',
+    marginTop: 20,    
   },
   button: {
     backgroundColor: '#FF5733', // Red-orange background
     borderRadius: 10,
     paddingVertical: 10,
-    paddingHorizontal: 15,
-    marginTop: 10,
-    justifyContent:'space-between'
-  },
-  buttonSpacing: {
-    marginLeft: 20, // Add space between the buttons
+    paddingHorizontal: 20,
+    marginTop: 0,    
+    marginRight:-50
   },
   buttonText: {
     color: '#ffffff',
-    fontSize: 14,
+    fontSize: 20,
     fontWeight: 'bold',
   }
 });
