@@ -23,15 +23,28 @@ export default function TabLayout() {
           ),
         }}
       />
-      <Tabs.Screen
-        name="explore"
+       <Tabs.Screen
+        name="features"
         options={{
-          title: 'Explore',
+          title: 'Features',
+          headerShown:false,
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <TabBarIcon name={focused ? 'list' : 'list-outline'} color={color} />
           ),
+         
         }}
       />
+      {/* <Tabs.Screen
+        name="competitionResults"
+        options={{
+          title: 'Competition Results',
+          headerShown:false,
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'person' : 'person-outline'} color={color} />
+          ),
+         
+        }}
+      /> */}
     </Tabs>
   );
 }

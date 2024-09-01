@@ -6,11 +6,11 @@ import LastCompResults from '../../components/HCompetitionResults';
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.appContainer}>
+    <SafeAreaView style={styles.appContainer}  >
       <Image style={styles.logo} source={require('../../../assets/images/Logo.png')}/>
       <TodaySchedule />
       <LastCompResults/>
-      <Link href={'/(admin)/explore'} style={styles.moreText}>More +</Link>
+      <Link href={'/(admin)/features/'}  style={styles.moreText}>More +</Link>
     </SafeAreaView>
   );
 }
