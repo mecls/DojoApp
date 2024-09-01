@@ -7,11 +7,11 @@ const FeaturesScreen = () => {
         <Image style={styles.icon} source={require('../../assets/images/FeaturesMan.png')}/>
         <Pressable>
             <View style={styles.moduleBox} >
-                <TouchableOpacity style={styles.scheduleBox}>
-                <Text style={[styles.scheduleText,styles.scheduleTextBold]}>Interactive Learning</Text> 
+                <TouchableOpacity style={styles.scheduleBox} onPress={()=> console.warn('Awaiting feature')}>
+                <Text style={[styles.scheduleText,styles.scheduleTextBold]}  >Finance statistics</Text> 
                 </TouchableOpacity>
-                <TouchableOpacity style={[styles.scheduleBox, styles.moduleVerticalSpacing]}>
-                <Text style={[styles.scheduleText,styles.scheduleTextBold]}>Competition Results</Text> 
+                <TouchableOpacity style={[styles.scheduleBox, styles.moduleVerticalSpacing]} onPress={()=> console.warn('Awaiting feature')}>
+                <Text style={[styles.scheduleText,styles.scheduleTextBold]}>Training Attendance</Text> 
                 </TouchableOpacity>
                 {/* <TouchableOpacity style={styles.scheduleBox}>
                 <Text style={[styles.scheduleText,styles.scheduleTextBold]}>OTHER STUFF</Text> 

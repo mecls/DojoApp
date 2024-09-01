@@ -1,15 +1,15 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
-const TodaySchedule = () => {
+const TomorrowSchedule = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>TODAY SCHEDULE</Text>
+      <Text style={styles.title}>TOMORROW SCHEDULE</Text>
       <View style={styles.scheduleBox}>
-        <Image  style={styles.icon} source={require('../../assets/images/Medal_First_Place.png')}/>
-        <Text style={styles.scheduleText}><Text style={[styles.scheduleText,styles.scheduleTextBold]}>CLASS:</Text> BJJ</Text>
-        <Text style={styles.scheduleText}><Text style={[styles.scheduleText,styles.scheduleTextBold]}>TIME:</Text> 18:30h</Text>
-        <Text style={styles.scheduleText}><Text style={[styles.scheduleText,styles.scheduleTextBold]}>COACH:</Text> Brian</Text>
+        <Image  style={styles.icon} source={require('../../assets/images/Tuesday.png')}/>
+        <Text style={styles.scheduleText}><Text style={[styles.scheduleText,styles.scheduleTextBold]}>CLASS:</Text> MMA</Text>
+        <Text style={styles.scheduleText}><Text style={[styles.scheduleText,styles.scheduleTextBold]}>TIME:</Text> 19:30h</Text>
+        <Text style={styles.scheduleText}><Text style={[styles.scheduleText,styles.scheduleTextBold]}>COACH:</Text> André</Text>
         
         <View style={styles.buttonContainer}>
           <TouchableOpacity  style={styles.button} onPress={()=>{console.warn('Add to Calender');}}  >
@@ -20,9 +20,6 @@ const TodaySchedule = () => {
           </TouchableOpacity>
         </View>
         
-        <TouchableOpacity style={styles.largeButton} onPress={()=>{console.warn('Schedule Next Class');}} >
-          <Text style={styles.largeButtonText}>Schedule next class</Text>
-        </TouchableOpacity>
       </View>
     </View>
   );
@@ -39,7 +36,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     fontStyle: 'italic',
-    marginBottom: 10,
+    marginBottom: 5,
+    marginTop:-40,
   },
   scheduleBox: {
     backgroundColor: '#1E3A8A', // Dark blue background
@@ -70,14 +68,14 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
-    marginTop: 10,
+    marginTop: 20,
   },
   button: {
     backgroundColor: '#FF5733', // Red-orange background
     borderRadius: 10,
     paddingVertical: 10,
     paddingHorizontal: 15,
-    marginTop: 10,
+    marginTop: -10,
     justifyContent:'space-between'
   },
   buttonSpacing: {
@@ -87,20 +85,7 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontSize: 20,
     fontWeight: 'bold',
-  },
-  largeButton: {
-    backgroundColor: '#FF5733', // Red-orange background
-    borderRadius: 10,
-    paddingVertical: 15,
-    paddingHorizontal: 20,
-    marginTop: 20,
-    alignItems: 'center',
-  },
-  largeButtonText: {
-    color: '#ffffff',
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
+  }
 });
 
-export default TodaySchedule;
+export default TomorrowSchedule;
