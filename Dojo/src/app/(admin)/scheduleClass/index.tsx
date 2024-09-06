@@ -1,5 +1,6 @@
 import TodaySchedule from '@/src/components/STodaySchedules';
 import TomorrowSchedule from '@/src/components/STomorrowSchedule';
+import { Link } from 'expo-router';
 import React from 'react';
 import { SafeAreaView, StyleSheet, Image, Text, Button, TouchableOpacity, View} from 'react-native';
 
@@ -14,8 +15,8 @@ export default function Features() {
           <TouchableOpacity  style={styles.button} onPress={()=>{console.warn('Add to Calender');}}  >
             <Text style={styles.buttonText}>Schedule Class</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={()=>{console.warn('Details');}} style={[styles.button,styles.buttonSpacing]}>
-            <Text style={styles.buttonText}>All</Text>
+          <TouchableOpacity  style={[styles.button,styles.buttonSpacing]}>
+            <Link href={'/(admin)/scheduleClass/allSchedules/'} style={styles.buttonText}>All</Link>
           </TouchableOpacity>
         </View>
     </SafeAreaView>
