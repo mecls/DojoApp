@@ -1,20 +1,19 @@
 import SmallCompDetails from '@/src/components/SmallCompForDetails';
-import TodaySchedule from '@/src/components/STodaySchedules';
-import TomorrowSchedule from '@/src/components/STomorrowSchedule';
+
 import React from 'react';
 import { SafeAreaView, StyleSheet, Image, Text, Button, TouchableOpacity, View} from 'react-native';
-import { FlatList } from 'react-native-reanimated/lib/typescript/Animated';
+import { FlatList } from 'react-native';
+import classes from '@/assets/data/classes';
+
 
 export default function AllSchedules() {
   return (
     <SafeAreaView style={styles.appContainer} >
-      <Image style={styles.logo} source={require('../../../../../assets/images/Logo.png')}/>
         <Text style={[styles.title, styles.titleBold]}>All Schedules</Text>
-        {/* <FlatList
-        data={}
-        /> */}
-        <SmallCompDetails data={{id:'1', date:'Monday',classType:'MMA', time: '19:30h', professor: 'Andre'}}/>
-      
+        <FlatList
+        data={classes}
+        renderItem={({item})=> <SmallCompDetails d_class={item}/>}
+        />
     </SafeAreaView>
   );
 }

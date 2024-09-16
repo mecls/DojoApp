@@ -3,17 +3,17 @@ import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { Class } from '../app/types';
 
 type ClassItemProps={
-    data: Class;
+    d_class: Class;
 };
 
-const SmallCompDetails = ({ data }: ClassItemProps) => {
+const SmallCompDetails = ({ d_class }: ClassItemProps) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{data?.date}</Text>
+      <Text style={styles.title}>{d_class?.date}</Text>
       <View style={styles.scheduleBox}>
-        <Text style={styles.scheduleText}><Text style={[styles.scheduleText,styles.scheduleTextBold]}>CLASS:</Text>{data?.classType}</Text>
-        <Text style={styles.scheduleText}><Text style={[styles.scheduleText,styles.scheduleTextBold]}>TIME:</Text>{data?.time}</Text>
-        <Text style={styles.scheduleText}><Text style={[styles.scheduleText,styles.scheduleTextBold]}>COACH:</Text>{data?.professor}</Text>
+        <Text style={styles.scheduleText}><Text style={[styles.scheduleText,styles.scheduleTextBold]}>CLASS:</Text>{d_class?.classType}</Text>
+        <Text style={styles.scheduleText}><Text style={[styles.scheduleText,styles.scheduleTextBold]}>TIME:</Text>{d_class?.time}</Text>
+        <Text style={styles.scheduleText}><Text style={[styles.scheduleText,styles.scheduleTextBold]}>COACH:</Text>{d_class?.professor}</Text>
         
         <View style={styles.buttonContainer}>
           <TouchableOpacity onPress={()=>{console.warn('Details');}} style={[styles.button]}>
@@ -31,7 +31,8 @@ const styles = StyleSheet.create({
     padding: 0,
     alignContent:'center',
     flex:1,
-    margin:10
+    margin:10,
+    marginTop:30,
   },
   title: {
     fontSize: 16,
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
     marginBottom: 5,
     marginTop:-10,
-    marginLeft:-20,
+    marginLeft:-10,
   },
   scheduleBox: {
     backgroundColor: '#1E3A8A', // Dark blue background
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
     padding:20,
     paddingRight:180,
     paddingBottom:30,
-    marginLeft:-20,
+    marginLeft:-10,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.3,

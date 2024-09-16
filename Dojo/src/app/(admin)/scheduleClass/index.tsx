@@ -3,6 +3,7 @@ import TomorrowSchedule from '@/src/components/STomorrowSchedule';
 import { Link } from 'expo-router';
 import React from 'react';
 import { SafeAreaView, StyleSheet, Image, Text, Button, TouchableOpacity, View} from 'react-native';
+import { Header } from 'react-native/Libraries/NewAppScreen';
 
 export default function Features() {
   return (
@@ -16,7 +17,7 @@ export default function Features() {
             <Text style={styles.buttonText}>Schedule Class</Text>
           </TouchableOpacity>
           <TouchableOpacity  style={[styles.button,styles.buttonSpacing]}>
-            <Link href={'/(admin)/scheduleClass/allSchedules/'} style={styles.buttonText}>All</Link>
+            <Link href={'/(admin)/scheduleClass/allSchedules/'} style={[styles.buttonText ]}>All</Link>
           </TouchableOpacity>
         </View>
     </SafeAreaView>
