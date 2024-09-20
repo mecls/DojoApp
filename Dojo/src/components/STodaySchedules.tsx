@@ -1,3 +1,4 @@
+import { Redirect } from 'expo-router';
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
@@ -15,7 +16,7 @@ const TodaySchedule = () => {
           <TouchableOpacity  style={styles.button} onPress={()=>{console.warn('Add to Calender');}}  >
             <Text style={styles.buttonText}>Add to Calendar</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={()=>{console.warn('Details');}} style={[styles.button,styles.buttonSpacing]}>
+          <TouchableOpacity onPress={()=>{<Redirect href={'/(admin)/scheduleClass/scheduleDetails'}/>}}style={[styles.button,styles.buttonSpacing]}>
             <Text style={styles.buttonText}>Details</Text>
           </TouchableOpacity>
         </View>

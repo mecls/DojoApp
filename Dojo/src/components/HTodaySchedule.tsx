@@ -1,3 +1,4 @@
+import { Link } from 'expo-router';
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
@@ -7,7 +8,7 @@ const TodaySchedule = () => {
       <Text style={styles.title}>TODAY SCHEDULE</Text>
       <View style={styles.scheduleBox}>
         <Image  style={styles.icon} source={require('../../assets/images/Medal_First_Place.png')}/>
-        <Text style={styles.scheduleText}><Text style={[styles.scheduleText,styles.scheduleTextBold]}>CLASS:</Text> BJJ</Text>
+        <Text style={styles.scheduleText}><Text style={[styles.scheduleText,styles.scheduleTextBold]}>CLASS:</Text>BJJ </Text>
         <Text style={styles.scheduleText}><Text style={[styles.scheduleText,styles.scheduleTextBold]}>TIME:</Text> 18:30h</Text>
         <Text style={styles.scheduleText}><Text style={[styles.scheduleText,styles.scheduleTextBold]}>COACH:</Text> Brian</Text>
         
@@ -15,8 +16,8 @@ const TodaySchedule = () => {
           <TouchableOpacity  style={styles.button} onPress={()=>{console.warn('Add to Calender');}}  >
             <Text style={styles.buttonText}>Add to Calendar</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={()=>{console.warn('Details');}} style={[styles.button,styles.buttonSpacing]}>
-            <Text style={styles.buttonText}>Details</Text>
+          <TouchableOpacity style={[styles.button,styles.buttonSpacing]}>
+            <Link href={'/(admin)/scheduleClass/scheduleDetails'}  style={styles.buttonText}>Details</Link>
           </TouchableOpacity>
         </View>
         
